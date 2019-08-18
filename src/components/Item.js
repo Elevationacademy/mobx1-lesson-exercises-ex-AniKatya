@@ -7,8 +7,9 @@ class Item extends Component {
     this.props.store.checkItem(e.target.value)
   }
   editItem = (e) => {
-    prompt("Change the location")
-    this.props.store.editItem(e.target.value)
+    let location = "shop"
+    prompt("Change the location", location)
+    this.props.store.editItem(e.target.value, location)
   }
   deleteItem = (e) => {
     this.props.store.deleteItem(e.target.value)
@@ -20,7 +21,7 @@ class Item extends Component {
         <input type="checkbox" onClick = {this.checkItem} 
           value={item.name} />
         {item.name} {item.location} 
-        <button className ="editButton" onClick ={this.editItem}>Edit</button>
+        <button className ="editButton" value = {item.name} onClick ={this.editItem}>Edit</button>
         <button className ="deleteButton" value = {item.name} onClick ={this.deleteItem}>Delete</button>
       </div>)
   }
