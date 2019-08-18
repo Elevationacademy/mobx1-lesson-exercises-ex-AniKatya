@@ -66,6 +66,7 @@
     "jest-expect-message": "github:Elevationacademy/jest-expect-message",
     "jest-test-runner": "git+https://github.com/Elevationacademy/jest-test-runner.git",
     "jest-transform-stub": "^1.0.0",
+    "mobx-react-devtools": "^6.1.1",
     "react-test-renderer": "^16.4.2"
   },
   "scripts": {
