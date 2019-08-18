@@ -15,13 +15,14 @@ export class ShoppingList {
         this.list.push(newItem)
     }
     @action editItem = (itemName, newLocation) => {
-        prompt("Change the location")
         let item = this.list.find(i => i.name === itemName)
         item.location = newLocation
     }
 
-    deleteItem = () => {
-        // your code here
+    @action deleteItem = (itemName) => {
+        let itemNames = this.list.map(i => i.name)
+        let index = itemNames.indexOf(itemName,0)
+        this.list.splice(index,1)
     } 
 }
 
